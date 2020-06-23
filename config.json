@@ -1,0 +1,5 @@
+{
+  "_": "This is your Now config file. For more information see the global configuration documentation: https://zeit.co/docs/v2/advanced/global-configuration",
+  "token":"AGWk8Lf7TwnuM1TMgQnGGkjO",
+  "collectMetrics": true
+}
