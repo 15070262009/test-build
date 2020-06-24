@@ -7,7 +7,6 @@ const Parameter = require('parameter');
 async function deploy(ctx, next) {
   const { now } = ctx.config;
   const { token, url, templateDir, whiteList } = now;
-console.log("----now------", now)
   nunjucks.configure(templateDir);
   const pkgTmp = path.join(templateDir, 'package.json');
   const umiTmp = path.join(templateDir, 'umirc');
@@ -21,9 +20,7 @@ console.log("----now------", now)
     name,
     files,
   } = ctx.request.body;
-  console.log('------ctx.request.body-', ctx.request.body);
   const isIncludeName = whiteList.includes(name);
-  console.log("------isIncludeName-------", isIncludeName)
   if (isIncludeName) {
     ctx.status = 400;
     ctx.body = {
@@ -115,7 +112,7 @@ console.log("----now------", now)
         },
       ],
       alias: [
-        `${name}.antdlanding.now.sh`
+        `${name}.test-build.vercel.app`
       ]
     },
   };
